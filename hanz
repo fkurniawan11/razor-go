@@ -1,0 +1,108 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\USER> --gasmultiplier 1 --buffer 20 --wait 30 --gasprice 0 --logLevel debug --gasLimit 2
+At line:1 char:3
++ --gasmultiplier 1 --buffer 20 --wait 30 --gasprice 0 --logLevel debug ...
++   ~
+Missing expression after unary operator '--'.
+At line:1 char:3
++ --gasmultiplier 1 --buffer 20 --wait 30 --gasprice 0 --logLevel debug ...
++   ~~~~~~~~~~~~~
+Unexpected token 'gasmultiplier' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterOperator
+                  docker run -d -it --name razor-go -v "$(echo $HOME)"/.razor:/root/.razor razornetwork/razor-go:v1.0.3-incentivised-testnet-phase2-patch2
+docker: invalid reference format.
+See 'docker run --help'.
+PS C:\Users\USER> docker exec -it razor-go razor setConfig --provider https://staging-v2.skalenodes.com/v1/whispering-turais --gasmultiplier 1 --buffer 20 --wait 30 --gasprice 0 --logLevel debug --gasLimit 2
+Error: No such container: razor-go
+PS C:\Users\USER> docker exec -it razor-go razor <command>
+At line:1 char:32
++ docker exec -it razor-go razor <command>
++                                ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\USER> docker exec -it razor-go razor create
+Error: No such container: razor-go
+PS C:\Users\USER> docker exec -it razor-go razor import
+Error: No such container: razor-go
+PS C:\Users\USER> docker exec -it razor-go razor addStake --address <account> --value <value> --logFile <filename>
+At line:1 char:51
++ docker exec -it razor-go razor addStake --address <account> --value < ...
++                                                   ~
+The '<' operator is reserved for future use.
+At line:1 char:69
++ ... xec -it razor-go razor addStake --address <account> --value <value> - ...
++                                                                 ~
+The '<' operator is reserved for future use.
+At line:1 char:87
++ ... azor addStake --address <account> --value <value> --logFile <filename ...
++                                                                 ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\USER> docker exec -it razor-go razor addStake --address 0x4561aE6Bd8aF4E6E8668C55496cF73F882CfcbFa --value 10000 --logFile logs
+Error: No such container: razor-go
+PS C:\Users\USER> docker exec -it razor-go razor setDelegation --address <address> --status <bool> --commission <commission> --logFile <filename>
+At line:1 char:56
++ docker exec -it razor-go razor setDelegation --address <address> --st ...
++                                                        ~
+The '<' operator is reserved for future use.
+At line:1 char:75
++ ... t razor-go razor setDelegation --address <address> --status <bool> -- ...
++                                                                 ~
+The '<' operator is reserved for future use.
+At line:1 char:95
++ ... Delegation --address <address> --status <bool> --commission <commissi ...
++                                                                 ~
+The '<' operator is reserved for future use.
+At line:1 char:118
++ ... ddress> --status <bool> --commission <commission> --logFile <filename ...
++                                                                 ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\USER> docker exec -it razor-go razor setDelegation --address 0x4561aE6Bd8aF4E6E8668C55496cF73F882CfcbFa --status true --commission 1 --logFile logs
+Error: No such container: razor-go
+PS C:\Users\USER> docker exec -it razor-go razor setDelegation --address 0x4561aE6Bd8aF4E6E8668C55496cF73F882CfcbFa --status true --commission 1 --logFile logs
+Error: No such container: razor-go
+PS C:\Users\USER> docker exec -it razor-go razor vote --address <account> --logFile <filename>
+At line:1 char:47
++ docker exec -it razor-go razor vote --address <account> --logFile <fi ...
++                                               ~
+The '<' operator is reserved for future use.
+At line:1 char:67
++ ...  exec -it razor-go razor vote --address <account> --logFile <filename ...
++                                                                 ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\USER> docker exec -it razor-go razor vote --address 0x4561aE6Bd8aF4E6E8668C55496cF73F882CfcbFa --logFile logs
+Error: No such container: razor-go
+PS C:\Users\USER> tail -f $HOME/.razor/[filename].log
+tail : The term 'tail' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path
+is correct and try again.
+At line:1 char:1
++ tail -f $HOME/.razor/[filename].log
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (tail:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\USER> tail -f $HOME/.razor/logs.log
+tail : The term 'tail' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path
+is correct and try again.
+At line:1 char:1
++ tail -f $HOME/.razor/logs.log
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (tail:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
